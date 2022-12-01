@@ -19,3 +19,7 @@ class SearchParty:
         grp = self.data.groupby("elf")
         self.calories_per_elf = grp["calories"].sum()
         return self.calories_per_elf.max()
+
+    def task_1_2(self):
+        sorted_elves = self.calories_per_elf.sort_values(ascending=False)
+        return sorted_elves.head(3).sum()
