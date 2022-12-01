@@ -16,3 +16,6 @@ def test_first_elf(search_party):
     assert totals.loc[3]["calories"] == 24000
     assert totals.loc[4]["calories"] == 10000
 
+def test_sum_of_first_three(search_party):
+    search_party.task_1_1() # ugly
+    assert search_party.task_1_2() == 45000
